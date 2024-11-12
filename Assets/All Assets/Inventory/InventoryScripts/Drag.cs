@@ -20,7 +20,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if(eventData.pointerCurrentRaycast.gameObject.name == "NumberImage")
+        if(eventData.pointerCurrentRaycast.gameObject.name == "Number")
         {
             transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent);
             transform.position = eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.position;
